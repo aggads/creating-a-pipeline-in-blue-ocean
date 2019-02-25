@@ -1,10 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+    stage('Cloning git') {
       steps {
-        sh 'npm install'
-        sh 'npm install'
+        git(url: 'https://github.com/gustavoapolinario/node-todo-frontend', branch: 'master')
       }
     }
   }
